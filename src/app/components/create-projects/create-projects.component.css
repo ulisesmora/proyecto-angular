@@ -1,0 +1,81 @@
+.formulario{
+    margin-top: 3rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+h2{
+    font-family:"Nothing You Could Do",cursive ;
+    font-size: 2.7rem;
+    border-bottom: 3px goldenrod double;
+}
+
+.campo, .image{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.campo label, .description label, .image label{
+    font-size: 1.7rem;
+font-family: 'Amatic SC', cursive;
+    font-weight: 500;
+}
+
+.campo input, .description input, .image input{
+    
+    font-size: 1.3rem;
+font-family: 'Amatic SC', cursive;
+border: 2px ;
+    height: 2rem;
+    border-style: dotted;
+    transition: ease-in 0.3s;
+    letter-spacing: 2px;
+
+}
+
+.campo input:focus{
+  border-color: goldenrod;
+  
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+.button{
+    font-size: 2rem;
+    font-family: 'Amatic SC', cursive;
+    border-style: none;
+    width: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+        height: 2.7rem;
+        transition: ease-in 0.3s;
+        letter-spacing: 2px;
+        background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+        box-shadow: 0 8px 6px -6px black;
+        cursor: pointer;
+}
+
+.button:hover{
+    color: aliceblue;
+}
+
+
+span{
+    color: #fc6076;
+    font-size: 1.3rem;
+}

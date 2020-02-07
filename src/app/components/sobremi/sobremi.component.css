@@ -1,0 +1,43 @@
+#title{
+    text-align: center;
+    padding: 5rem;
+}
+
+h1{
+font-family: 'Nothing You Could Do', cursive;
+font-size: 4rem;
+border-bottom: 3px double goldenrod ;
+}
+
+h2{
+    
+font-family: 'Amatic SC', cursive;
+    font-size: 3.3rem;
+    font-weight: 500;
+}
+
+#aboutme h2{
+
+    border-bottom: 3px rgb(121, 183, 219) solid;
+}
+
+.email{
+font-family: 'Jura', sans-serif;
+    font-size: 1.3rem;
+    border-bottom: 2px solid;
+
+
+}
+
+#aboutme{
+    display: flex;
+    width: 90%;
+}
+
+#description{
+    flex-basis: 65%;
+}
+
+.img{
+    flex-basis: 40%;
+}

@@ -1,0 +1,107 @@
+/*Estilos Generales*/
+
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) no-repeat fixed;
+    
+}
+
+h1{
+font-size: 3.3rem;
+
+font-family: 'Nunito', sans-serif;
+
+font-family: 'Jura', sans-serif;
+}
+
+a{
+
+font-family: 'Nothing You Could Do', cursive;
+text-decoration: none;
+font-size: 1.7rem;
+}
+
+
+/*Header*/
+
+.menu{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    
+    height: 100px;
+    background-attachment: fixed;
+    box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+}
+
+.menu ul{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+align-content: center;
+text-align: center;
+}
+
+.menu li{
+    list-style: none;
+    display: inline;
+    margin-top: 1.7rem;
+    text-decoration: none;
+}
+
+
+
+.selec {
+    color: black;
+    transition: color 500ms;
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+
+.selec:hover{
+    color: whitesmoke;
+    margin-bottom: 2rem;
+}
+
+
+
+
+.logo{
+    color: black;
+    font-size: 3rem;
+    font-weight: 900;
+    transition: ease-in 0.5s;
+}
+
+.logo:hover{
+ font-size: 4rem;
+ color: rgba(5, 1, 2, 0.575);
+}
+
+
+.actived {
+    color: whitesmoke;
+}
+
+/*main*/
+
+#content{
+    width: 95%;
+    min-height: 45rem;
+    margin: 0 auto;
+    box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    margin: 0 auto;
+    height: 10rem;background-image: linear-gradient(to right, #434343 0%, black 100%);
+    box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+}
+

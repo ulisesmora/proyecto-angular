@@ -1,0 +1,55 @@
+<div class="formulario" *ngIf="project">
+    <h2> {{title}} </h2>
+    
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+
+        <div class="campo">
+            <label for="name">Nombre</label>
+            <input  name="name" #name="ngModel" [(ngModel)]="project.name" required >
+            <span *ngIf="name.touched && !name.valid">Este campo es obligatorio</span>
+        </div>
+
+        <div class="description">
+            <label for="description">Descripcion</label>
+            <textarea rows="7" cols="70"  name="description" #description="ngModel" [(ngModel)]="project.description" required>  </textarea>
+            
+            <span *ngIf="description.touched && !description.valid">Este campo es obligatorio</span>
+        </div>
+
+
+        <div class="campo">
+            <label for="category">Categoria</label>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required>
+            
+            <span *ngIf="category.touched && !category.valid">Este campo es obligatorio</span>
+        </div>
+
+        <div class="campo">
+            <label for="year">Año de lanzamiento</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year"  >
+
+        </div>
+
+        <div class="campo">
+            <label for="langs">Lenguajes Utilizados</label>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required >
+            
+            <span *ngIf="langs.touched && !langs.valid">Este campo es obligatorio</span>
+        </div>
+
+        <div class="image">
+            <label for="image">imagen</label>
+            <span *ngIf="project.image">
+                <img  src="{{url+'get-image/'+project.image}} "   width="100px"  alt="">
+            </span>
+            <input type="file" name="image" placeholder="Subir Imagen" (change)="fileChangeEvent($event)">
+        </div>
+
+
+        <input class="button" type="submit" value="Enviar" [disabled]="!projectForm.form.valid">
+
+    </form>
+
+    <simple-notifications></simple-notifications>
+
+</div>
