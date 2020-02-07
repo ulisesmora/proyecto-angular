@@ -52,8 +52,7 @@ export class EditComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.project);
-    console.log(this.id);
+   
     
   	this._projectService.updateProject(this.id,this.project).subscribe(
 		response => {
@@ -76,7 +75,7 @@ export class EditComponent implements OnInit {
 				this.status = 'failed';
       }
       
-      this._router.navigate(["/proyectos"]);
+     // this._router.navigate(["/proyectos"]);
   		},
   		error => {
   			console.log(<any>error);

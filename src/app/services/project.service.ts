@@ -46,10 +46,11 @@ export class ProjectService{
 
 
     updateProject(id,project:Project): Observable<any>{
-        let params = JSON.stringify(project);
-        let headers = new HttpHeaders().set("Content-Type","aplication/json");
+        let params = JSON.stringify(project.name);
+        console.log(params);
+        let headers = new HttpHeaders().set("Content-Type","aplication/json; charset=utf-8'");
       
-        return this._http.put(this.url+ "project/"+id, params,  {headers:headers});
+        return this._http.put(this.url+ "project/"+id, {name: project.name, description: project.description, category:project.category, year: project.year, langs:project.langs }  , );
         
     }
 }
