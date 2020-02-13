@@ -20,37 +20,38 @@ export class ProjectService{
 
     saveProject(project: Project):Observable<any>{
         let params = JSON.stringify(project);
-        let headers = new HttpHeaders().set("Content-type","application/json");
+        let headers = new HttpHeaders().set("Content-Type","application/json");
         return this._http.post(this.url+ "save-project",params,{headers:headers} );
 
     }
 
     getProjects():Observable<any>{
-        let headers = new HttpHeaders().set("Content-Type","aplication/json");
+        let headers = new HttpHeaders().set("Content-Type","application/json");
         return this._http.get(this.url + "projects", {headers: headers});
 
     }
 
     getProject(id):Observable<any>{
-        let headers = new HttpHeaders().set("Content-Type","aplication/json");
+        let headers = new HttpHeaders().set("Content-Type","application/json");
         return this._http.get(this.url+"project/"+id, {headers:headers});
     }
 
 
     deleteProject(id):Observable<any>{
         
-        let headers = new HttpHeaders().set("Content-Type","aplication/json");
+        let headers = new HttpHeaders().set("Content-Type","application/json");
         return this._http.delete(this.url+ "project/"+id, {headers:headers});
 
     }
 
 
-    updateProject(id,project:Project): Observable<any>{
-        let params = JSON.stringify(project.name);
+    updateProject(project:Project): Observable<any>{
+        let params = JSON.stringify(project);
         console.log(params);
-        let headers = new HttpHeaders().set("Content-Type","aplication/json; charset=utf-8'");
+        let headers = new HttpHeaders().set("Content-Type","application/json");
+        console.log(project._id);
       
-        return this._http.put(this.url+ "project/"+id, {name: project.name, description: project.description, category:project.category, year: project.year, langs:project.langs }  , );
+        return this._http.put(this.url+ "project/"+project._id, params  ,{ headers:headers} );
         
     }
 }

@@ -20,6 +20,7 @@ export class EditComponent implements OnInit {
 	public filesToUpload: Array<File>;
   public url: string;
   public id:string;
+public  confirm:boolean;
 
 	constructor(
 		private _projectService: ProjectService,
@@ -53,8 +54,8 @@ export class EditComponent implements OnInit {
 
   onSubmit(){
    
-    
-  	this._projectService.updateProject(this.id,this.project).subscribe(
+    console.log(this.project);
+  	this._projectService.updateProject(this.project).subscribe(
 		response => {
   			if(response.project){
           console.log(response.project);

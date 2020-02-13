@@ -21,6 +21,7 @@ export class CreateComponent implements OnInit {
   public status: string;
   private uploadService:UploadService;
   public filesToUpload: Array<File>;
+  public confirm:boolean;
 
   constructor(projectService:ProjectService, private service:NotificationsService, private upload:UploadService) {
     this.projectService = projectService;
